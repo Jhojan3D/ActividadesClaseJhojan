@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class ParalaxEffect : MonoBehaviour
 {
-    [SerializeField] private Renderer bGRender;
+    private Renderer bGRender;
     public float speed;
+
+    private void Start()
+    {
+        bGRender = GetComponent<Renderer>();
+    }
 
     private void Update()
     {
