@@ -1158,7 +1158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d210ebfbd03676844a58ef9ea76b85b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bGRender: {fileID: 1122355992}
   speed: 1.5
 --- !u!483693784 &1122355992
 TilemapRenderer:
@@ -2028,6 +2027,7 @@ GameObject:
   - component: {fileID: 1648416553}
   - component: {fileID: 1648416555}
   - component: {fileID: 1648416554}
+  - component: {fileID: 1648416556}
   m_Layer: 0
   m_Name: Stage
   m_TagString: Untagged
@@ -3170,6 +3170,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!210 &1648416556
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648416549}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &1820530029
 GameObject:
   m_ObjectHideFlags: 0
