@@ -15,4 +15,9 @@ public class ParalaxEffect : MonoBehaviour
         bGRender.material.mainTextureOffset = new Vector2(0,Time.time *speed);
     }
 
+
+
+
+
+
 }

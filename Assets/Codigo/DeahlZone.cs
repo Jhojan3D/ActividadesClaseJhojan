@@ -10,4 +10,6 @@ public class DeahlZone : MonoBehaviour
             Debug.Log("el personaje se muere");
         }
     }
+
+   
 }
