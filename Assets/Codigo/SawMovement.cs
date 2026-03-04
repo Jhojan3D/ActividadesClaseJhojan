@@ -9,18 +9,16 @@ public class SawMovement : MonoBehaviour
     [SerializeField] private List<Transform> targets = new List<Transform>();
 
     [SerializeField] private float speed;
-    private float originalSpeed;
+    
 
     [SerializeField] private int currentTarget;
-    private int energia = 5;
-    private float tiempoDeRecarga = 3f;
-    bool recargando = false;
+    
 
     void Start()
 
     {
         saw.position = targets[currentTarget].position;
-        originalSpeed = speed;
+       
     }
     private void Update()
     {
