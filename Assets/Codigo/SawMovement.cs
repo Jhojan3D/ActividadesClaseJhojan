@@ -14,6 +14,7 @@ public class SawMovement : MonoBehaviour
     [SerializeField] private int currentTarget;
     private float contador = 2;
     bool esperando = false;
+    private int direction = 1;  
 
 
     void Start()
@@ -22,39 +23,32 @@ public class SawMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (esperando == false)
-        {
+      
             if (saw.position == targets[currentTarget].position)
             {
-                currentTarget++;
+                currentTarget += direction;
+                
 
-                if (currentTarget >= targets.Count)
+            if (currentTarget >= targets.Count -1)
                 {
-                    currentTarget = 0;
+                    direction = -1;
                 }
+                if (currentTarget <= 0)
+                {
+                    direction = 1;
             }
+        }
 
             saw.position = Vector2.MoveTowards(saw.position, targets[currentTarget].position, speed * Time.deltaTime);
 
-            if (saw.position == targets[currentTarget].position)
-            {
-                esperando = true;
-            }
+        
         }
-        else
-        {
-            contador -= Time.deltaTime;
-            if (contador <= 0)
-            {
-                esperando = false;
-                contador = 2;
-            }
-        }
+   
            
         
 
     }
 
-}
+
 
 
