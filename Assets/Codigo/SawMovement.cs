@@ -11,30 +11,50 @@ public class SawMovement : MonoBehaviour
 
     [SerializeField] private float speed;
 
-    private int currentTarget;
+    [SerializeField] private int currentTarget;
+    private float contador = 2;
+    bool esperando = false;
 
-    private void Start()
+
+    void Start()
     {
-        saw.position = targets[0].position;
-        currentTarget = 0;
+        saw.position = targets[currentTarget].position;
     }
-
     private void Update()
-
     {
-        if (saw.position == targets[currentTarget].position)
+        if (esperando == false)
         {
-            currentTarget++;
-        }  
+            if (saw.position == targets[currentTarget].position)
+            {
+                currentTarget++;
 
-        if (currentTarget >= targets.Count)
-        {
-            currentTarget = 0;
+                if (currentTarget >= targets.Count)
+                {
+                    currentTarget = 0;
+                }
+            }
+
+            saw.position = Vector2.MoveTowards(saw.position, targets[currentTarget].position, speed * Time.deltaTime);
+
+            if (saw.position == targets[currentTarget].position)
+            {
+                esperando = true;
+            }
         }
-        saw.position = Vector2.MoveTowards(saw.position, targets[currentTarget].position, speed * Time.deltaTime);
-
+        else
+        {
+            contador -= Time.deltaTime;
+            if (contador <= 0)
+            {
+                esperando = false;
+                contador = 2;
+            }
+        }
+           
+        
 
     }
+
 }
 
 
