@@ -24,8 +24,8 @@ public class SawMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (recargando == false)
-        { 
+      
+        
         if (saw.position == targets[currentTarget].position)
         {
             currentTarget++;
@@ -38,33 +38,8 @@ public class SawMovement : MonoBehaviour
         }
 
         saw.position = Vector2.MoveTowards(saw.position, targets[currentTarget].position, speed * Time.deltaTime);
-            if(saw.position == targets[currentTarget].position)
-            {
-                energia--;
-                Debug.Log("Energia: " + energia);
-
-                if(energia <=0)
-                {
-                    recargando = true;
-                }
-                if (energia <= 1)
-                {
-                    speed = 0.5f;
-                }
-            }
-
-        }
-        else
-        {
-            tiempoDeRecarga -= Time.deltaTime;
-            if (tiempoDeRecarga <= 0)
-            {
-                recargando = false;
-                tiempoDeRecarga = 3f;
-                energia = 5;
-                speed = originalSpeed;
-            }
-        }
+          
+        
 
     }
 
