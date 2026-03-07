@@ -4464,6 +4464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1020583968}
   - component: {fileID: 1020583969}
+  - component: {fileID: 1020583970}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -4541,6 +4542,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1020583970
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020583967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8391f0b70474b0459980137a512eb52, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1061931336
 GameObject:
   m_ObjectHideFlags: 0
@@ -4665,6 +4688,7 @@ MonoBehaviour:
   - {fileID: 1846573690}
   speed: 2
   currentTarget: 2
+  animator: {fileID: 0}
 --- !u!4 &1094528118
 Transform:
   m_ObjectHideFlags: 0
@@ -5817,6 +5841,7 @@ MonoBehaviour:
   - {fileID: 2075453002}
   speed: 2
   currentTarget: 0
+  animator: {fileID: 1020583970}
 --- !u!1 &1654838481
 GameObject:
   m_ObjectHideFlags: 0
@@ -6206,6 +6231,7 @@ MonoBehaviour:
   - {fileID: 237108592}
   speed: 2
   currentTarget: 0
+  animator: {fileID: 0}
 --- !u!4 &1835268101
 Transform:
   m_ObjectHideFlags: 0
@@ -9516,6 +9542,7 @@ MonoBehaviour:
   - {fileID: 1710755151}
   speed: 2
   currentTarget: 0
+  animator: {fileID: 0}
 --- !u!4 &2095816602
 Transform:
   m_ObjectHideFlags: 0
