@@ -20,7 +20,7 @@ public class SawMovement : MonoBehaviour
     void Start()
 
     {
-       
+        
         saw.position = targets[currentTarget].position;
        
     }
@@ -29,17 +29,18 @@ public class SawMovement : MonoBehaviour
         if (isActive == true)
         {
             TurnOn();
-            MovimientoCierra();
+            
 
         }
         else
         {
             TurnOff();
+            MovimientoCierra();
         }
     }
 
            
-    private void MovimientoCierra()
+    public void MovimientoCierra()
     {
         if (saw.position == targets[currentTarget].position)
         {
@@ -57,16 +58,16 @@ public class SawMovement : MonoBehaviour
     }
 
 
-    private void TurnOn()
+    public void TurnOn()
     {
 
-        animator.SetBool("isOn", true);
+        animator.SetBool("isOn", false);
     }
 
-    private void TurnOff()
+    public void TurnOff()
 
     {
-        animator.SetBool("isOn", false);
+        animator.SetBool("isOn", true);
     }
 
 }
