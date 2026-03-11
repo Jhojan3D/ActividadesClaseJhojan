@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -19,21 +20,27 @@ public class SawMovement : MonoBehaviour
     void Start()
 
     {
+       
         saw.position = targets[currentTarget].position;
        
     }
     private void Update()
     {
-      if (isActive == true)
+        if (isActive == true)
+        {
+            TurnOn();
+            MovimientoCierra();
+
+        }
+        else
         {
             TurnOff();
         }
-      else
-        {
-            TurnOn();
-        }
+    }
 
-        
+           
+    private void MovimientoCierra()
+    {
         if (saw.position == targets[currentTarget].position)
         {
             currentTarget++;
@@ -46,9 +53,10 @@ public class SawMovement : MonoBehaviour
         }
 
         saw.position = Vector2.MoveTowards(saw.position, targets[currentTarget].position, speed * Time.deltaTime);
-         
 
     }
+
+
     private void TurnOn()
     {
 
