@@ -26,16 +26,17 @@ public class SawMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (isActive == true)
+        if (isActive == false)
         {
             TurnOn();
+            MovimientoCierra();
             
 
         }
         else
         {
             TurnOff();
-            MovimientoCierra();
+            
         }
     }
 
@@ -61,14 +62,15 @@ public class SawMovement : MonoBehaviour
     public void TurnOn()
     {
 
-        animator.SetBool("isOn", false);
+        animator.SetBool("isOn", true);
     }
 
     public void TurnOff()
 
     {
-        animator.SetBool("isOn", true);
+        animator.SetBool("isOn", false);
     }
+
 
 }
 
